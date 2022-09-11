@@ -8,7 +8,7 @@ interface SectionHeadingProps {
 const SectionHeading = ({ title, className }: SectionHeadingProps) => {
   return (
     <h1
-      className={`font-bold text-[20px] lg:text-[30px] text-center font-mono ${className}`}
+      className={`font-bold text-[20px] lg:text-[30px] text-center font-spacemono ${className}`}
     >
       {title}
     </h1>

@@ -15,13 +15,11 @@ const Interests = () => {
   ];
 
   return (
-    <div className="mt-2 pt-2 pb-3 bg-purple-600">
-      <SectionHeading title="Interests 😎" className="text-white" />
-      <div className="text-center text-white mx-auto text-[16px] lg:text-lg text-semibold flex flex-col">
-        <p className="font-normal">I love to write articles in my leisure</p>
-        <p className="font-normal">
-          I have published a couple of articles on Geeks For Geeks.
-        </p>
+    <div className="mt-2 py-2 bg-gradient-to-r from-violet-500 to-pink-500 shadow-black">
+      <SectionHeading title="Interests 🚀" className="text-white" />
+      <div className="font-inter px-2 lg:px-3 pb-2 text-white mx-auto lg:text-lg flex flex-col">
+        <p>I love to write articles in my leisure.</p>
+        <p>I have published a couple of articles on Geeks For Geeks.</p>
         <p className="mt-2">Checkout my articles 👇</p>
         {articles.map((article, index) => {
           return (

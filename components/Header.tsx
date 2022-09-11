@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import Button from "./Button";
 
 const Header = () => {
   const [path, setPath] = useState("");
@@ -23,7 +22,7 @@ const Header = () => {
   };
 
   return (
-    <div className="px-3 border-b-gray-200 border-b-2 h-12 py-4 flex items-center justify-between mb-3">
+    <div className="font-inter px-3 border-b-violet-400 shadow-md border-b-2 h-12 py-4 flex items-center justify-between mb-1">
       <img
         src="https://icon2.cleanpng.com/20180609/ryh/kisspng-firebase-cloud-messaging-google-cloud-messaging-api-as-a-service-5b1bf782ac0ca2.2103995315285594907047.jpg"
         alt="Test"
@@ -36,7 +35,7 @@ const Header = () => {
             <div
               key={idx}
               className={`nav-item ${
-                path === item.path ? "text-purple-600" : ""
+                path === item.path ? "text-violet-500" : ""
               }`}
               onClick={() => navOnClick(item.path)}
             >
@@ -44,7 +43,6 @@ const Header = () => {
             </div>
           );
         })}
-        {/* <Button title="Resume" className="text-md" onClick={() => {}} /> */}
       </section>
     </div>
   );
