@@ -7,6 +7,7 @@ import MongoDBLogo from "../assets/logo/mongodb.svg";
 import ReduxLogo from "../assets/logo/redux.svg";
 import DjangoLogo from "../assets/logo/django.svg";
 import NextJSLogo from "../assets/logo/nextjs.svg";
+import SanityLogo from "../assets/logo/sanity.png";
 import TechLogo from "./TechLogo";
 
 const Tech = () => {
@@ -21,6 +22,7 @@ const Tech = () => {
         <TechLogo image={MongoDBLogo} />
         <TechLogo image={ReduxLogo} />
         <TechLogo image={DjangoLogo} />
+        <TechLogo image={SanityLogo} />
       </section>
     </div>
   );

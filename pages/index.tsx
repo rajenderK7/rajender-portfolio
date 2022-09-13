@@ -3,15 +3,17 @@ import Footer from "../components/Footer";
 import Interests from "../components/Interests";
 import Intro from "../components/Intro";
 import QuickNav from "../components/QuickNav";
+import SocailMediaMobile from "../components/SocailMediaMobile";
 import Tech from "../components/Tech";
 
 const Home: NextPage = () => {
   return (
     <>
       <Intro />
-      <Interests />
-      <Tech />
       <QuickNav />
+      <Tech />
+      <Interests />
+      <SocailMediaMobile onlyMobile />
       <Footer />
     </>
   );
