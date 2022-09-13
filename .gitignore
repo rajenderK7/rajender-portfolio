@@ -16,6 +16,7 @@
 portfolio/node_modules
 portfolio/config
 portfolio/dist
+portfolio/sanity.json
 
 # production
 /build
