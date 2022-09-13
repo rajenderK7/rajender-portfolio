@@ -30,7 +30,7 @@ const LinkButton = ({ title, onClick, className }: LinkButtonProps) => {
   return (
     <button
       type="button"
-      className={`mx-2 my-2 px-3 py-2 flex items-center font-semibold text-base text-center text-violet-500 bg-white border-gray-400 shadow-md rounded-lg hover:bg-violet-500 hover:text-white hover:border-none ${className}`}
+      className={`mx-2 my-2 px-3 py-2 flex items-center font-semibold text-sm lg:text-base text-center text-violet-500 bg-white border-gray-400 shadow-md rounded-lg hover:bg-violet-500 hover:text-white hover:border-none ${className}`}
       onClick={onClick}
     >
       {title}

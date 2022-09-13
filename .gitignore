@@ -12,6 +12,11 @@
 /.next/
 /out/
 
+#sanity
+portfolio/node_modules
+portfolio/config
+portfolio/dist
+
 # production
 /build
 

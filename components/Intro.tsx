@@ -13,8 +13,8 @@ const Intro = () => {
           </span>
         </div>
         <p className="text-base font-inter lg:text-lg">
-          I'm a web and self-taught mobile application developer. I love
-          building apps for easing out daily life.
+          I'm a web and self-taught mobile application developer. More than
+          building apps.
         </p>
       </div>
     </section>

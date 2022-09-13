@@ -1,7 +1,12 @@
 import React from "react";
+import ComingSoon from "../components/ComingSoon";
 
-const blog = () => {
-  return <div>blog</div>;
+const Blog = () => {
+  return (
+    <div className="text-center mt-4">
+      <ComingSoon />
+    </div>
+  );
 };
 
-export default blog;
+export default Blog;

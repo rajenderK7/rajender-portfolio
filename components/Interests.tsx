@@ -15,10 +15,9 @@ const Interests = () => {
   ];
 
   return (
-    <div className="mt-2 py-2 bg-gradient-to-r from-violet-500 to-pink-500 shadow-black">
+    <div className="mt-1 lg:mt-5 pt-1 pb-2 bg-gradient-to-r from-cyan-500 to-blue-500">
       <SectionHeading title="Interests 🚀" className="text-white" />
       <div className="font-inter px-2 lg:px-3 pb-2 text-white mx-auto lg:text-lg flex flex-col">
-        <p>I love to write articles in my leisure.</p>
         <p>I have published a couple of articles on Geeks For Geeks.</p>
         <p className="mt-2">Checkout my articles 👇</p>
         {articles.map((article, index) => {
