@@ -1,30 +1,16 @@
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
-import { sanityClient } from "../sanity";
 import QuickNavItem from "./QuickNavItem";
 import SectionHeading from "./SectionHeading";
-import { groq } from "next-sanity";
 
-const QuickNav = () => {
+interface QuickLink {
+  resumeURL: string;
+}
+
+const QuickNav = ({ resumeURL }: QuickLink) => {
   const router = useRouter();
   const projectsOnClick = () => {
     router.push("/projects");
   };
-
-  const [resumeURL, setResumeURL] = useState("");
-
-  const downloadResume = async () => {
-    const query = groq`*[_type == "myFiles" && title == "Katkuri Rajender Resume"][0] {
-      "downloadURL": resume.asset->url,
-    }`;
-
-    const data = await sanityClient.fetch(query);
-    setResumeURL(data.downloadURL);
-  };
-
-  useEffect(() => {
-    downloadResume();
-  }, []);
 
   return (
     <div className="mt-3 pt-2 pb-3 bg-gradient-to-r from-violet-500 to-pink-500">

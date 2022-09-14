@@ -13,8 +13,8 @@ const Intro = () => {
           </span>
         </div>
         <p className="text-base font-inter lg:text-lg">
-          I'm a web and self-taught mobile application developer. More than
-          building apps.
+          <strong>Web</strong> and self-taught <strong>Mobile</strong>{" "}
+          application developer. <strong>Web3</strong> enthusiast⚡
         </p>
       </div>
     </section>

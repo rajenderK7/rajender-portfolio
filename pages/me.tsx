@@ -42,13 +42,11 @@ const Me = () => {
       </section>
       <section>
         <AboutHeader title="Experience" />
-        <div className="block p-3 max-w-sm mx-auto bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-          <h5 className="mb-2 text-lg font-inter font-semibold tracking-tight text-gray-900 dark:text-white">
+        <div className="block p-3 max-w-sm mx-auto rounded-lg border shadow-md bg-gray-800 border-gray-700 hover:bg-gray-700">
+          <h5 className="mb-2 text-lg font-inter font-semibold tracking-tight text-white">
             Fosterate
           </h5>
-          <p className="font-normal text-gray-700 dark:text-gray-400">
-            Flutter Developer Intern
-          </p>
+          <p className="font-normal text-gray-400">Flutter Developer Intern</p>
         </div>
       </section>
       <section className="my-3">
