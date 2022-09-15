@@ -15,7 +15,7 @@ const QuickNav = ({ resumeURL }: QuickLink) => {
   return (
     <div className="mt-3 pt-2 pb-3 bg-gradient-to-r from-violet-500 to-pink-500">
       <SectionHeading title="Explore 🪐" className="text-white" />
-      <section className="font-inter mt-1 mx-auto flex flex-col lg:items-center lg:max-w-xl ">
+      <section className="font-inter mx-auto flex flex-col lg:items-center lg:max-w-xl ">
         <QuickNavItem
           title="Checkout my projects. I ❤️ to build mobile and web apps."
           buttonTitle="Projects"

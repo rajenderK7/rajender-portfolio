@@ -3,6 +3,8 @@ import React from "react";
 import { MetatagsProps } from "../interfaces/metaTagsProps";
 
 const Metatags = ({ title, description, image, author }: MetatagsProps) => {
+  // from the public folder
+  image = "android-chrome-512x512.png";
   return (
     <Head>
       <title>{title}</title>
@@ -16,6 +18,7 @@ const Metatags = ({ title, description, image, author }: MetatagsProps) => {
 
       {/* Open graph */}
       <meta property="og:title" content={title} />
+      <meta property="og:url" content="www.rajender.dev" />
       <meta property="og:type" content="Portfolio" />
       <meta property="description" content={description} />
       <meta property="og:image" content={image} />
