@@ -12,6 +12,7 @@ import author from "./author";
 import resume from "./resume";
 import myFiles from "./myFiles";
 import project from "./project";
+import blog from "./blog";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -31,5 +32,6 @@ export default createSchema({
     // { type: 'typename' } in other document schemas
     blockContent,
     resume,
+    blog,
   ]),
 });

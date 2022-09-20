@@ -21,10 +21,12 @@ const Header = () => {
   ];
 
   return (
-    <div className="font-inter px-3 border-b-violet-400 shadow-md border-b-2 h-12 py-4 flex items-center justify-between mb-1">
-      <div className="relative h-8 w-8">
-        <Image src={r7} objectFit="contain" layout="fill" />
-      </div>
+    <div className="font-inter px-3 border-b-violet-400 shadow-md border-b-2 h-12 py-4 flex items-center justify-between">
+      <Link href="/">
+        <div className="cursor-pointer relative h-7 w-7 lg:h-8:w-8">
+          <Image src={r7} objectFit="contain" layout="fill" />
+        </div>
+      </Link>
       <section className="flex items-center justify-evenly space-x-5">
         {navItems.map((item, idx) => {
           return (

@@ -18,7 +18,7 @@ const AboutHeader = ({ title }: AboutHeaderProps) => {
 const Me = () => {
   const myName: string = "Rajender Katkuri";
   const myDescription: string =
-    "I'm a computer science undergrad from Hyderabad. I'm a web and self-taught mobile application developer.";
+    "I'm a computer science undergrad from Hyderabad. I'm a Web & Mobile application developer.";
 
   return (
     <div className="m-3 px-2 pt-2 font-inter">

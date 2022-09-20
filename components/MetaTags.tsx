@@ -4,7 +4,6 @@ import { MetatagsProps } from "../interfaces/metaTagsProps";
 
 const Metatags = ({ title, description, image, author }: MetatagsProps) => {
   // from the public folder
-  image = "android-chrome-512x512.png";
   return (
     <Head>
       <title>{title}</title>
