@@ -16,4 +16,12 @@
   .social-link {
     @apply hover:scale-110 cursor-pointer transition-all duration-100 ease-out;
   }
+
+  .ext-link {
+    @apply text-blue-700 hover:scale-y-105 duration-100 ease-out text-base;
+  }
+
+  .btn-basic {
+    @apply my-2 px-3 py-2 flex items-center font-semibold text-sm lg:text-base text-center text-violet-500 bg-white border-gray-400 shadow-md rounded-lg hover:scale-105 hover:transition-all hover:duration-150 ease-out;
+  }
 }

@@ -1,7 +1,9 @@
 import React, { MouseEventHandler } from "react";
 import DownloadButton from "./DownloadButton";
 import LinkButton from "./LinkButton";
-import { HiMail } from "react-icons/hi";
+import { HiArrowSmRight } from "react-icons/hi";
+import { HiDownload } from "react-icons/hi";
+import MailHelper from "./MailHelper";
 
 interface QuickNavItemProps {
   title: string;
@@ -11,18 +13,6 @@ interface QuickNavItemProps {
   download?: boolean;
   url?: string;
 }
-
-const MailHelper = ({ title, mail }: any) => {
-  return (
-    <a
-      href={mail}
-      className={`mx-2 my-2 px-3 py-2 flex items-center font-semibold text-sm lg:text-base text-center text-violet-500 bg-white border-gray-400 shadow-md rounded-lg hover:bg-slate-100 hover:border-none`}
-    >
-      {title}
-      <span className="ml-2 text-xl">{<HiMail />}</span>
-    </a>
-  );
-};
 
 const QuickNavItem = ({
   title,
@@ -36,7 +26,13 @@ const QuickNavItem = ({
 
   switch (buttonTitle) {
     case "Projects": {
-      action = <LinkButton title={buttonTitle} onClick={onClick} />;
+      action = (
+        <LinkButton
+          title={buttonTitle}
+          onClick={onClick}
+          icon={<HiArrowSmRight />}
+        />
+      );
       break;
     }
     case "Resume": {
@@ -52,7 +48,7 @@ const QuickNavItem = ({
   }
 
   return (
-    <div className="flex w-full items-center px-2 justify-center lg:justify-between">
+    <div className="flex w-full items-center px-2 justify-between lg:justify-between">
       <p
         className={`text-sm lg:text-base text-white italic font-normal ${className}`}
       >

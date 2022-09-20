@@ -7,13 +7,12 @@ export interface ArticleProps {
 
 const Article = ({ title, link }: ArticleProps) => {
   return (
-    <a
-      href={link}
-      target="_blank"
-      className="text-black underline hover:scale-y-105 duration-100 ease-out text-base"
-    >
-      {title}
-    </a>
+    <li className="list-none">
+      <small className="mr-1">🔗</small>
+      <a href={link} target="_blank" className="ext-link">
+        {title}
+      </a>
+    </li>
   );
 };
 
