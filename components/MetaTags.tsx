@@ -17,8 +17,8 @@ const Metatags = ({ title, description, image, author }: MetatagsProps) => {
 
       {/* Open graph */}
       <meta property="og:title" content={title} />
-      <meta property="og:url" content="www.rajender.dev" />
-      <meta property="og:type" content="Portfolio" />
+      <meta property="og:url" content="https://www.rajender.dev" />
+      <meta property="og:type" content="Portfolio Blog" />
       <meta property="description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:image:alt" content={title} />
