@@ -8,7 +8,7 @@ const Metatags = ({ title, description, image, author }: MetatagsProps) => {
     <Head>
       <title>{title}</title>
       {/* Twitter */}
-      <meta property="twitter:card" content="summary" />
+      <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:creator" content={author ?? "Rajender Katkuri"} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:title" content={title} />
