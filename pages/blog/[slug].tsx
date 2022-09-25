@@ -19,6 +19,7 @@ interface BlogProps {
   author: string;
   mainImage: string;
   description: string;
+  _createdAt: Date;
   _updatedAt: Date;
   content: any;
 }
@@ -27,10 +28,13 @@ const Blog: NextPage = ({
   title,
   author,
   mainImage,
+  _createdAt,
   _updatedAt,
   description,
   content,
+  slug,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const createdAt = <TimeAgo datetime={_createdAt} live={false} />;
   const updatedAt = <TimeAgo datetime={_updatedAt} live={false} />;
 
   const copyShareLink = () => {
@@ -45,6 +49,7 @@ const Blog: NextPage = ({
         description={description}
         author={author}
         image={mainImage}
+        url={`https://rajender.dev/blog/${slug}`}
       />
       <div className="relative w-full h-36 lg:h-52">
         <Image src={mainImage} priority objectFit="cover" layout="fill" />
@@ -53,10 +58,17 @@ const Blog: NextPage = ({
         <h1 className="my-4 text-4xl font-bold lg:font-extrabold tracking-tight text-gray-900 lg:text-5xl lg:leading-none">
           {title}
         </h1>
-        <div className="font-inter flex justify-between items-center mt-2 text-[15px] text-gray-500">
-          <p className="text-">{`by ${author}`}</p>
-          <div className="flex space-x-4 mr-2 items-center">
-            <p className="text-">{updatedAt}</p>
+        <div className="font-inter flex justify-between items-start text-[15px] text-gray-500">
+          <p className=" text-black">{`by ${author}`}</p>
+          <div className="flex flex-col lg:space-x-4 items-end lg:items-center text-sm lg:flex lg:flex-row">
+            <div className="hidden lg:flex">
+              Posted:
+              <p className="ml-2 text-black">{createdAt}</p>
+            </div>
+            <div className="flex">
+              Updated:
+              <p className="ml-2 text-black">{updatedAt}</p>
+            </div>
           </div>
         </div>
         <hr className="my-3 lg:my-5 h-px bg-gray-300 border-0"></hr>
@@ -83,6 +95,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const query = `*[_type == "blog" && !(_id in path("drafts.**")) && slug.current=="${slug}"][0] {
     "author": (author -> {name}).name,
     _updatedAt,
+    _createdAt,
     title,
     description,
     content,
@@ -96,6 +109,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
       ...blog,
+      slug,
     },
   };
 };

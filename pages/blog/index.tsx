@@ -28,7 +28,7 @@ export const getStaticProps: GetStaticProps = async () => {
     title,
     "slug": slug.current,
     description,
-    _updatedAt,
+    _createdAt,
     content,
   }`;
 

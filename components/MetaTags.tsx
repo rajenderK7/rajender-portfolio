@@ -2,7 +2,13 @@ import Head from "next/head";
 import React from "react";
 import { MetatagsProps } from "../interfaces/metaTagsProps";
 
-const Metatags = ({ title, description, image, author }: MetatagsProps) => {
+const Metatags = ({
+  title,
+  description,
+  image,
+  author,
+  url,
+}: MetatagsProps) => {
   // from the public folder
   return (
     <Head>
@@ -17,9 +23,9 @@ const Metatags = ({ title, description, image, author }: MetatagsProps) => {
 
       {/* Open graph */}
       <meta property="og:title" content={title} />
-      <meta property="og:url" content="https://www.rajender.dev" />
+      <meta property="og:url" content={url} />
       <meta property="og:type" content="Portfolio Blog" />
-      <meta property="description" content={description} />
+      <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:image:alt" content={title} />
       <meta name="author" content={author ?? "Rajender Katkuri"} />
