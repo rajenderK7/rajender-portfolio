@@ -6,6 +6,7 @@ import { readTimeCalculator } from "../lib/utils/read_time_calculator";
 export interface BlogTileProps {
   _id?: string;
   _updatedAt: Date;
+  _createdAt: Date;
   title?: string;
   description?: string;
   slug: string;
@@ -17,10 +18,10 @@ const BlogTile = ({
   description,
   slug,
   content,
-  _updatedAt,
+  _createdAt,
 }: BlogTileProps) => {
   const readTime: number = readTimeCalculator(content);
-  const updatedAt = <TimeAgo datetime={_updatedAt} live={false} />;
+  const createdAt = <TimeAgo datetime={_createdAt} live={false} />;
 
   return (
     <div className="mt-1 mb-3 px-3 py-4 lg:py-6 lg:px-10 max-w-2xl lg:mt-5 bg-white rounded-lg border border-violet-300 lg:shadow-lg shadow-md">
@@ -38,7 +39,7 @@ const BlogTile = ({
                 <span className="text-black mr-1">by </span>Rajender
               </a>
             </Link>
-            <p className="text-end text-sm">{updatedAt}</p>
+            <p className="text-end text-sm">{createdAt}</p>
           </div>
           <p className="text-end text-sm">{`${readTime} min read`}</p>
         </div>
