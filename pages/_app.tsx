@@ -15,9 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Layout>
         <>
           <Header />
-          <div className="mt-1">
-            <Component {...pageProps} />
-          </div>
+          <Component {...pageProps} />
         </>
       </Layout>
     </>

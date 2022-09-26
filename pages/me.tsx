@@ -16,9 +16,9 @@ const AboutHeader = ({ title }: AboutHeaderProps) => {
 };
 
 const Me = () => {
-  const myName: string = "Katkuri Rajender";
+  const myName: string = "Rajender Katkuri";
   const myDescription: string =
-    "I'm a computer science undergrad from Hyderabad. I'm a web and self-taught mobile application developer.";
+    "I'm a computer science undergrad from Hyderabad. I'm a Web & Mobile application developer.";
 
   return (
     <div className="m-3 px-2 pt-2 font-inter">
@@ -36,8 +36,8 @@ const Me = () => {
       <section className="lg:text-center">
         <p>{myDescription}</p>
         <p className="mt-3">
-          I love building apps and I ocassionally write articles on the tech I
-          worked, to help beginners understand it better.
+          I love building apps and ocassionally write articles on the tech I
+          worked on, to help beginners understand it better.
         </p>
       </section>
       <section>

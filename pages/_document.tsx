@@ -10,6 +10,11 @@ export default function Document() {
           description="Web and mobile application developer"
         />
         <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
+        <link
           href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Inter&family=Space+Mono&display=swap"
           rel="stylesheet"
         ></link>

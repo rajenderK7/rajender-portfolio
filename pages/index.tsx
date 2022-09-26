@@ -1,7 +1,10 @@
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
+import { useRouter } from "next/router";
+import { HiArrowSmRight } from "react-icons/hi";
 import Footer from "../components/Footer";
 import Interests from "../components/Interests";
 import Intro from "../components/Intro";
+import LinkButton from "../components/LinkButton";
 import QuickNav from "../components/QuickNav";
 import SocailMediaMobile from "../components/SocailMediaMobile";
 import Tech from "../components/Tech";
@@ -14,6 +17,10 @@ type QuickLink = {
 const Home: NextPage = ({
   resumeURL,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const router = useRouter();
+
+  const gotoBlog = () => router.push("/blog");
+
   return (
     <>
       <Intro />
