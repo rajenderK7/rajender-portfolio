@@ -9,7 +9,7 @@ const Blogs = ({
   return (
     <div className="m-3 lg:mx-0">
       <div className="font-inter text-center lg:text-base">
-        <p>🚀 Tutorials | Roadmaps | Resources ❤️‍🔥</p>
+        <p>🚀 Tutorials • Roadmaps • Resources ❤️‍🔥</p>
       </div>
       <div className="mt-3 flex flex-col items-center">
         {blogTiles.map((blog: BlogTileProps) => {

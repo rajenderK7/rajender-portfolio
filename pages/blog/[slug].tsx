@@ -55,24 +55,24 @@ const Blog: NextPage = ({
         <Image src={mainImage} priority objectFit="cover" layout="fill" />
       </div>
       <main className="mx-3">
-        <h1 className="my-4 text-4xl font-bold lg:font-extrabold tracking-tight text-gray-900 lg:text-5xl lg:leading-none">
+        <h1 className="my-4 text-4xl font-bold lg:font-extrabold tracking-tight text-gray-900 dark:text-white lg:text-5xl lg:leading-none">
           {title}
         </h1>
         <div className="font-inter flex justify-between items-start text-[15px] text-gray-500">
-          <p className=" text-black">{`by ${author}`}</p>
+          <p className=" text-black dark:text-white">{`by ${author}`}</p>
           <div className="flex flex-col lg:space-x-4 items-end lg:items-center text-sm lg:flex lg:flex-row">
             <div className="hidden lg:flex">
               Posted:
-              <p className="ml-2 text-black">{createdAt}</p>
+              <p className="ml-2 text-black dark:text-gray-400">{createdAt}</p>
             </div>
             <div className="flex">
               Updated:
-              <p className="ml-2 text-black">{updatedAt}</p>
+              <p className="ml-2 text-black dark:text-gray-400">{updatedAt}</p>
             </div>
           </div>
         </div>
         <hr className="my-3 lg:my-5 h-px bg-gray-300 border-0"></hr>
-        <div className="font-inter prose prose-h2:m-0 prose-a:m-0 prose-a:text-blue-600 max-w-none">
+        <div className="font-inter prose prose-h2:m-0 prose-a:m-0 prose-a:text-blue-600 max-w-none dark:prose-headings:text-white dark:prose-blockquote:text-white dark:prose-p:text-gray-300 dark:prose-li:text-white dark:prose-figcaption:text-white dark:prose-pre:after:text-white dark:prose-lead:text-white dark:prose-ol:text-white dark:prose-code:text-white dark:prose-strong:text-white prose-img:object-cover">
           <MDXRemote {...content} />
         </div>
         <hr className="my-5 lg:my-8 h-px bg-gray-400 border-0"></hr>

@@ -12,9 +12,9 @@ import TechLogo from "./TechLogo";
 
 const Tech = () => {
   return (
-    <div className="my-3">
-      <SectionHeading title="Technologies 🔧" />
-      <section className="flex flex-wrap lg:mx-0 justify-center">
+    <div className="my-2 lg:my-3">
+      <SectionHeading title="Technologies" />
+      <section className="mt-3 flex flex-wrap lg:mx-0 justify-center">
         <TechLogo image={FlutterLogo} />
         <TechLogo image={NextJSLogo} />
         <TechLogo image={ReactLogo} />

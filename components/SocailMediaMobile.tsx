@@ -8,7 +8,7 @@ interface Props {
 const SocailMediaMobile = ({ onlyMobile }: Props) => {
   return (
     <section
-      className={`my-4 ${
+      className={`mt-6 mb-3 ${
         onlyMobile ? "lg:hidden" : ""
       } flex items-center justify-evenly text-3xl`}
     >

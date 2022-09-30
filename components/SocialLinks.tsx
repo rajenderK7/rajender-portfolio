@@ -33,7 +33,7 @@ export const Linkedin = () => {
 export const Github = () => {
   return (
     <a
-      className="social-link text-[#161B22]"
+      className="social-link dark:text-[#fbfbfb]"
       href={socialLinks["github"]}
       target="_blank"
     >

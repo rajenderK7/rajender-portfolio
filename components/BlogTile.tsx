@@ -24,9 +24,9 @@ const BlogTile = ({
   const createdAt = <TimeAgo datetime={_createdAt} live={false} />;
 
   return (
-    <div className="mt-1 mb-3 px-3 py-4 lg:py-6 lg:px-10 max-w-2xl lg:mt-5 bg-white rounded-lg border border-violet-300 lg:shadow-lg shadow-md">
+    <div className="mt-1 mb-3 px-3 py-4 lg:py-6 lg:px-10 max-w-2xl lg:mt-5 bg-white rounded-lg border border-violet-300 dark:bg-black dark:border-none lg:shadow-lg shadow-md">
       <Link href={`/blog/${slug}`}>
-        <a className="text-3xl font-bold hover:text-gray-900 text-violet-800 break-words">
+        <a className="text-3xl font-bold hover:text-gray-900 text-violet-800 dark:text-white break-words">
           {title}
         </a>
       </Link>
@@ -36,7 +36,8 @@ const BlogTile = ({
           <div className="flex space-x-4 lg:space-x-10">
             <Link href="/me">
               <a className="inline-flex items-center text-end text-sm text-blue-700 font-medium">
-                <span className="text-black mr-1">by </span>Rajender
+                <span className="text-black mr-1 dark:text-gray-500">by </span>
+                Rajender
               </a>
             </Link>
             <p className="text-end text-sm">{createdAt}</p>

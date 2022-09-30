@@ -9,7 +9,6 @@ const Metatags = ({
   author,
   url,
 }: MetatagsProps) => {
-  // from the public folder
   return (
     <Head>
       <title>{title}</title>
