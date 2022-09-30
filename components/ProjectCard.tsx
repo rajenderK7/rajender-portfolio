@@ -27,7 +27,7 @@ const ProjectCard = ({
 }: ProjectProps) => {
   return (
     <div className="my-3 lg:max-w-2xl rounded-lg border shadow-md bg-gray-800 border-gray-700 font-inter">
-      <div className="relative h-52 ">
+      <div className="mt-1 relative h-52 ">
         <Image
           className="rounded-t-lg"
           src={imgURL}

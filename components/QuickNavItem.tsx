@@ -2,7 +2,6 @@ import React, { MouseEventHandler } from "react";
 import DownloadButton from "./DownloadButton";
 import LinkButton from "./LinkButton";
 import { HiArrowSmRight } from "react-icons/hi";
-import { HiDownload } from "react-icons/hi";
 import MailHelper from "./MailHelper";
 
 interface QuickNavItemProps {
@@ -48,13 +47,11 @@ const QuickNavItem = ({
   }
 
   return (
-    <div className="flex w-full items-center px-2 justify-between lg:justify-between">
-      <p
-        className={`text-sm lg:text-base text-white italic font-normal ${className}`}
-      >
-        {title}
-      </p>
-      {action}
+    <div
+      className={`my-1 lg:my-0 flex lg:flex-col lg:items-start items-center justify-between lg:justify-between ${className}`}
+    >
+      <p className={`text-base`}>{title}</p>
+      <div className="ml-[7px] lg:mx-0 lg:mt-2">{action}</div>
     </div>
   );
 };

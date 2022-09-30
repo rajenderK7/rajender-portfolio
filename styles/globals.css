@@ -4,13 +4,13 @@
 
 @layer base {
   body {
-    @apply bg-white;
+    @apply bg-white dark:bg-[#12181B];
   }
 }
 
 @layer components {
   .nav-item {
-    @apply cursor-pointer text-base font-medium text-slate-600 lg:text-slate-500 hover:text-violet-600 lg:text-base lg:font-normal font-inter;
+    @apply cursor-pointer text-base font-medium dark:text-gray-400 text-slate-500 hover:text-violet-600 lg:text-base lg:font-normal font-inter;
   }
 
   .social-link {
@@ -22,6 +22,10 @@
   }
 
   .btn-basic {
-    @apply my-2 px-3 py-2 flex items-center font-semibold text-sm lg:text-base text-center text-violet-500 bg-white border-gray-400 shadow-md rounded-lg hover:scale-105 hover:transition-all hover:duration-150 ease-out;
+    @apply my-2 lg:mb-0 px-3 py-2 flex items-center font-semibold text-sm text-center dark:bg-white dark:text-black bg-black text-white border-gray-400 shadow-md lg:shadow-none rounded-lg hover:scale-105 hover:transition-all hover:duration-150 ease-out;
+  }
+
+  .btn-grad {
+    @apply bg-gradient-to-r from-pink-500 to-violet-500 hover:bg-violet-600 focus:outline-none shadow-md;
   }
 }

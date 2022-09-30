@@ -44,9 +44,12 @@ const Me = () => {
         <AboutHeader title="Experience" />
         <div className="block p-3 max-w-sm mx-auto rounded-lg border shadow-md bg-gray-800 border-gray-700 hover:bg-gray-700">
           <h5 className="mb-2 text-lg font-inter font-semibold tracking-tight text-white">
-            Fosterate
+            Flutter Developer Intern
           </h5>
-          <p className="font-normal text-gray-400">Flutter Developer Intern</p>
+          <p className="font-normal text-gray-400">Fosterate</p>
+          <p className="font-normal text-gray-400 text-sm">
+            February 2022 - June 2022
+          </p>
         </div>
       </section>
       <section className="my-3">
