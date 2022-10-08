@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Instagram, Linkedin, Mail } from "./SocialLinks";
+import { Github, Linkedin, Mail } from "./SocialLinks";
 
 const SocialMediaDesktop = () => {
   return (
@@ -8,7 +8,6 @@ const SocialMediaDesktop = () => {
         <Mail />
         <Linkedin />
         <Github />
-        <Instagram />
         <div className="block rounded-lg left-1/2 bottom-0 w-0.5 h-32 bg-violet-600"></div>
       </section>
     </div>

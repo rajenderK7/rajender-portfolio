@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Instagram, Linkedin, Mail } from "./SocialLinks";
+import { Github, Linkedin, Mail } from "./SocialLinks";
 
 interface Props {
   onlyMobile: boolean;
@@ -15,7 +15,6 @@ const SocailMediaMobile = ({ onlyMobile }: Props) => {
       <Mail />
       <Linkedin />
       <Github />
-      <Instagram />
     </section>
   );
 };
