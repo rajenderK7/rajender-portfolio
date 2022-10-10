@@ -23,12 +23,12 @@ const Blogs = ({
 export default Blogs;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const query = `*[_type == "blog" && !(_id in path("drafts.**"))] | order(_createdAt desc) {
+  const query = `*[_type == "blog" && !(_id in path("drafts.**"))] | order(publishedAt desc) {
     _id,
     title,
     "slug": slug.current,
     description,
-    _createdAt,
+    publishedAt,
     content,
   }`;
 
