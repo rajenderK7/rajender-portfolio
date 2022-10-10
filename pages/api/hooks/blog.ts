@@ -13,7 +13,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       return;
     }
 
-    const { slug } = req.body;
+    const slug = req.body.slug;
     await res.revalidate(`/blog/${slug}`);
     await res.revalidate(`/blog/`);
     res.status(200).json({ success: true, message: "Pages revalidated" });
