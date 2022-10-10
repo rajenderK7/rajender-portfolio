@@ -14,8 +14,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     }
 
     const { slug } = req.body;
-    await res.revalidate(`blog/${slug}`);
-    await res.revalidate(`blog/`);
+    await res.revalidate(`/blog/${slug}`);
+    await res.revalidate(`/blog/`);
     res.status(200).json({ success: true, message: "Pages revalidated" });
     console.log(`revalidated slug: ${slug}`);
   } catch (error) {
