@@ -28,13 +28,13 @@ const Blog: NextPage = ({
   title,
   author,
   mainImage,
-  _createdAt,
+  publishedAt,
   _updatedAt,
   description,
   content,
   slug,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const createdAt = <TimeAgo datetime={_createdAt} live={false} />;
+  const publishedTime = <TimeAgo datetime={publishedAt} live={false} />;
   const updatedAt = <TimeAgo datetime={_updatedAt} live={false} />;
 
   const copyShareLink = () => {
@@ -63,7 +63,9 @@ const Blog: NextPage = ({
           <div className="flex flex-col lg:space-x-4 items-end lg:items-center text-sm lg:flex lg:flex-row">
             <div className="hidden lg:flex">
               Posted:
-              <p className="ml-2 text-black dark:text-gray-400">{createdAt}</p>
+              <p className="ml-2 text-black dark:text-gray-400">
+                {publishedTime}
+              </p>
             </div>
             <div className="flex">
               Updated:
@@ -95,7 +97,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const query = `*[_type == "blog" && !(_id in path("drafts.**")) && slug.current=="${slug}"][0] {
     "author": (author -> {name}).name,
     _updatedAt,
-    _createdAt,
+    publishedAt,
     title,
     description,
     content,
