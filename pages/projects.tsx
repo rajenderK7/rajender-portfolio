@@ -1,8 +1,4 @@
-import {
-  GetServerSideProps,
-  InferGetServerSidePropsType,
-  NextPage,
-} from "next";
+import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
 import { sanityClient } from "../sanity";
@@ -21,7 +17,7 @@ interface ProjectProps {
 
 const Projects: NextPage = ({
   projects,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div>
       <h1 className="mt-3 font-bold font-inter text-xl text-center">
@@ -38,7 +34,7 @@ const Projects: NextPage = ({
 
 export default Projects;
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const query = `*[_type=="project" && !(_id in path("drafts.**"))] | order(publishedAt desc) {
     _id,
     _updatedAt,
