@@ -8,12 +8,12 @@
   "dependencies": {
     "@sanity/webhook": "^2.0.0",
     "@tailwindcss/typography": "^0.5.7",
-    "next": "latest",
+    "next": "^13.1.6",
     "next-mdx-remote": "^4.1.0",
     "next-sanity": "^0.8.4",
     "next-themes": "^0.2.1",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
     "timeago-react": "^3.0.5"
   },
