@@ -18,7 +18,14 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const validReq = req.query.secret === secret;
     console.log(`valid req ${validReq}`);
     console.log(`query secret ${req.query.secret}`);
-    console.log(`Parse req ${JSON.parse(JSON.stringify(req))}`);
+    // console.log(`Parse req ${JSON.parse(JSON.stringify(req))}`);
+    console.log(
+      `valid signature ${isValidSignature(
+        JSON.stringify(req.body),
+        signature,
+        secret
+      )}`
+    );
     console.log(`my secret ${secret}`);
     console.log(`signature ${signature}`);
     console.log(`req.body ${req.body}`);
