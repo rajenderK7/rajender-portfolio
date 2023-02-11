@@ -6,15 +6,18 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const secret = process.env.SANITY_WEBHOOK_SECRET ?? "";
     const signature = req.headers[SIGNATURE_HEADER_NAME]?.toString() ?? "";
     // validate the signature
-    if (!isValidSignature(JSON.stringify(req.body), signature, secret)) {
-      return res
-        .status(401)
-        .json({ success: false, message: "Invalid request" });
-    }
+    // if (!isValidSignature(JSON.stringify(req.body), signature, secret)) {
+    //   return res
+    //     .status(401)
+    //     .json({ success: false, message: "Invalid request" });
+    // }
+    console.log(`secret ${secret}`);
+    console.log(`signature ${signature}`);
+    console.log(`req.body ${req.body}`);
 
     const { slug } = req.body;
-    await res.revalidate(`/blog/${slug}`);
-    await res.revalidate(`/blog/`);
+    // await res.revalidate(`/blog/${slug}`);
+    // await res.revalidate(`/blog/`);
     console.log(`Revalidated slug: ${slug}`);
     res.status(200).json({ success: true });
   } catch (error) {
