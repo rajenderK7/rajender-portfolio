@@ -19,8 +19,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
 
   try {
     const { slug } = req.body;
-    await res.revalidate(`/blog/${slug}`);
     await res.revalidate("/blog/");
+    await res.revalidate(`/blog/${slug}`);
     res.status(200).json({ message: "Revalidation successful" });
   } catch (e) {
     return res.status(500).json({ message: "Something went wrong!" });
