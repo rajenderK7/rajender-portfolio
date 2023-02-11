@@ -15,8 +15,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     //     .status(401)
     //     .json({ success: false, message: "Invalid request" });
     // }
-
-    console.log(`Valid req ${isValidRequest(req, secret)}`);
+    const validReq = req.query.secret === secret;
+    console.log(`Valid req ${validReq}`);
     console.log(`secret ${secret}`);
     console.log(`signature ${signature}`);
     console.log(`req.body ${req.body}`);
