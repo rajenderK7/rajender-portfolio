@@ -16,9 +16,7 @@ const Intro = () => {
           <strong className="text-black dark:text-white">Web</strong> and
           self-taught{" "}
           <strong className="text-black dark:text-white">Mobile</strong>{" "}
-          application developer.{" "}
-          <strong className="text-black dark:text-white">Web3</strong>{" "}
-          enthusiast⚡
+          application developer.
         </p>
       </div>
     </section>
